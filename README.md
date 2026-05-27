@@ -1,4 +1,4 @@
-# ⚡ AlgoForge – LeetCode-style Coding Platform
+# ⚡ AlgoForge – Coding Platform
 
 A full-stack coding challenge platform with **Student** and **Admin** roles, Monaco Editor, real code execution, and detailed test case results.
 
