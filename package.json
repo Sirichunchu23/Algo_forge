@@ -1,7 +1,7 @@
 {
   "name": "algoforge",
   "version": "1.0.0",
-  "description": "AlgoForge – LeetCode-style Coding Platform",
+  "description": "AlgoForge – Coding Platform",
   "private": true,
   "scripts": {
     "install:all": "cd backend && npm install && cd ../frontend && npm install",

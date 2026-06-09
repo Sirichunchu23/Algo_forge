@@ -52,7 +52,7 @@ const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGODB_URI)
   .then(async () => {
     console.log('✅ MongoDB connected');
-    await seedAdmin();
+    //await seedAdmin();
     await seedProblems();
     app.listen(PORT, () => {
       console.log(`🚀 AlgoForge API running on port ${PORT}`);
@@ -63,7 +63,7 @@ mongoose.connect(process.env.MONGODB_URI)
     process.exit(1);
   });
 
-async function seedAdmin() {
+ async function seedAdmin() {
   try {
     const User = require('./models/User.model');
     const bcrypt = require('bcryptjs');
