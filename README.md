@@ -1,4 +1,4 @@
-# ⚡ AlgoForge – LeetCode-style Coding Platform
+# ⚡ AlgoForge – Coding Platform
 
 A full-stack coding challenge platform with **Student** and **Admin** roles, Monaco Editor, real code execution, and detailed test case results.
 
@@ -41,49 +41,11 @@ npm run install:all
 # cd ../frontend && npm install
 ```
 
-### 2. Configure Backend
-```bash
-cd backend
-cp .env.example .env
-# Edit .env — set MONGODB_URI and JWT_SECRET
-```
-
-### 3. Configure Frontend
-```bash
-cd frontend
-cp .env.example .env
-# Default: VITE_API_URL=http://localhost:5000/api  ← no change needed for local dev
-```
-
-### 4. Run Locally
-```bash
-# Terminal 1 — Backend (auto-seeds admin + 6 problems)
-cd backend && npm run dev
-# API: http://localhost:5000
-
-# Terminal 2 — Frontend
-cd frontend && npm run dev
-# App: http://localhost:3000
-```
-
-### 5. Default Credentials
+### 2. Default Credentials
 | Role | Email | Password |
 |------|-------|----------|
 | Admin | admin@algoforge.dev | Admin@123456 |
 | Student | Register at /register | Your choice |
-
----
-
-## 🗄️ MongoDB Atlas Setup
-
-1. Go to [mongodb.com/atlas](https://cloud.mongodb.com) → New free cluster (M0)
-2. **Security → Database Access** → Add user with read/write
-3. **Security → Network Access** → Add IP `0.0.0.0/0`
-4. **Deployment → Database → Connect → Drivers** → Copy URI
-5. Paste in `backend/.env`:
-```
-MONGODB_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/algoforge?retryWrites=true&w=majority
-```
 
 ---
 
@@ -116,33 +78,6 @@ USE_BUILTIN_EXECUTOR=false
 JUDGE0_URL=http://localhost:2358
 ```
 
----
-
-## 🚢 Deployment
-
-### Backend → Render.com
-1. Push to GitHub
-2. Render → New Web Service → connect repo → Root dir: `backend`
-3. Build: `npm install` | Start: `npm start`
-4. Add env vars:
-   - `MONGODB_URI`
-   - `JWT_SECRET` (32+ random chars)
-   - `NODE_ENV=production`
-   - `FRONTEND_URL=https://your-app.vercel.app`
-   - `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_USERNAME`
-5. Copy your Render URL: `https://algoforge-api.onrender.com`
-
-### Frontend → Vercel
-1. Vercel → New Project → Import repo → Root dir: `frontend`
-2. Framework: **Vite**
-3. Add env var: `VITE_API_URL=https://algoforge-api.onrender.com/api`
-4. Deploy → done!
-
-### Alternative Backend → Railway
-1. railway.app → New → GitHub repo → select `backend`
-2. Add same env vars as above
-
----
 
 ## 📁 Project Structure
 
@@ -232,7 +167,3 @@ algoforge/
 | Auth | JWT + bcryptjs |
 | Execution | Node.js vm (JS) + Judge0 CE (Python/Java) |
 
----
-
-## 📝 License
-MIT
