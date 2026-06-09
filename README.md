@@ -4,7 +4,7 @@ A full-stack coding challenge platform with **Student** and **Admin** roles, Mon
 
 ---
 
-## 🚀 Features
+##  Features
 
 ### Students
 - Register & login securely (JWT)
@@ -26,7 +26,7 @@ A full-stack coding challenge platform with **Student** and **Admin** roles, Mon
 
 ---
 
-## 🏃 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Node.js ≥ 18
@@ -49,7 +49,7 @@ npm run install:all
 
 ---
 
-## 🌍 Code Execution
+##  Code Execution
 
 AlgoForge ships with a **built-in JavaScript sandbox** (Node.js `vm` module) that works out of the box for JavaScript problems — no setup needed.
 
@@ -79,7 +79,7 @@ JUDGE0_URL=http://localhost:2358
 ```
 
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 algoforge/
@@ -132,7 +132,7 @@ algoforge/
 
 ---
 
-## 🔐 API Reference
+##  API Reference
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
@@ -153,7 +153,7 @@ algoforge/
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 | Layer | Tech |
 |-------|------|
